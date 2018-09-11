@@ -1,3 +1,14 @@
-spring.cloud.config.discovery.enabled=true
-spring.cloud.config.discovery.serviceId=config-server
-spring.cloud.config.profile=dev
+spring:
+    profiles:
+        active: 
+            -dev
+---
+spring:
+    profiles: dev
+    application:
+        name: dev
+---
+spring:
+    profiles: test
+    application:
+        name: test
